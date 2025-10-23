@@ -1,6 +1,6 @@
 
 let time = document.getElementById("time");
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1);
 
 
 
@@ -10,7 +10,7 @@ function updateTime() {
     let hours = String(now.getHours()).padStart(2, '0');
     let minutes = String(now.getMinutes()).padStart(2, '0');
     let seconds = String(now.getSeconds()).padStart(2, '0');
-    time.textContent = `${hours}:${minutes}:${seconds}`;
+    time.textContent = `${hours}:${minutes}`;
 }
 
 let title = document.getElementById("title");
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let hours = String(now.getHours()).padStart(2, '0');
         let minutes = String(now.getMinutes()).padStart(2, '0');
         let seconds = String(now.getSeconds()).padStart(2, '0');
-        title.textContent = `Time.is - ${hours}:${minutes}:${seconds} `;
-        let a = title.textContent = `Time.is - ${hours}:${minutes}:${seconds} `;
-    }, 1000);
+        title.textContent = `Time.is - ${hours}:${minutes}`;
+        let a = title.textContent = `Time.is - ${hours}:${minutes}`;
+    }, 1);
     updateTime();
 });
 
